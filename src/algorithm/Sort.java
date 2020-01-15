@@ -1,5 +1,9 @@
 package algorithm;
 
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Sort {
 
     long executionTime = 0;
@@ -19,7 +23,6 @@ public class Sort {
                 if (array[i] < array[min])
                     min = i;
             }
-
             int temp = array[min];
             array[min] = array[j];
             array[j] = temp;
@@ -34,21 +37,34 @@ public class Sort {
     public int[] insertionSort(int [] array){
         final long startTime = System.currentTimeMillis();
         int [] list = array;
-        //implement here
+        for (int i = 1; i < array.length; i++) {
+            int key = array[i];
+            int j = i -1;
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
+                j = j - 1;
+            }
+            array[j +1] = key;
+        }
 
 
 
         final long endTime = System.currentTimeMillis();
         final long executionTime = endTime - startTime;
         this.executionTime = executionTime;
-        return list;
+        return array;
     }
 
     public int[] bubbleSort(int [] array){
         int [] list = array;
-        //implement here
+        for (int i = 0; i < array.length-1; i++)
+            for (int j = 0; j < array.length-i-1; j++)
+                if (array[j] > array[j+1]) {
 
-        
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                }
         
         return list;
     }
@@ -56,14 +72,27 @@ public class Sort {
 
     public int [] mergeSort(int [] array){
         int [] list = array;
-        //implement here
-        
+        if (n < 2) {
+            return array;
+        }
+        int mid = array.length /2;
+        int [] 1 = new int[mid];
+        int [] r = new int[array.length - mid]
         
 
         return list;
     }
-    
+    for (int i = mid; i < array.length; i++) {
+        r[i - mid] = array[i];
+     }
+    mergeSort(1,mid);
+    mergeSort(r, array.length - mid);
 
+    merge(array, 1, r, mid, array.length - mid);
+
+
+
+    return array;
     public int [] quickSort(int [] array){
         int [] list = array;
         //implement here
@@ -83,7 +112,7 @@ public class Sort {
     }
 
 
-    public int [] bucketSort(int [] array){
+    public int [] bucketSort(int[] array, int i){
         int [] list = array;
         //implement here
         

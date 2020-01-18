@@ -25,7 +25,7 @@ public class DataReader {
 		 * Use For Each loop/while loop/Iterator to retrieve data.
 		 */
 
-		String textFile = "C:\\Users\\jakii\\Documents\\midterm\\MidtermJuly2019\\src\\data\\self-driving-car";
+		String textFile = "/Users/ahermassi/Documents/IdeaProjects/MidtermJuly2019/src/data/self-driving-car";
 		Stack<String> stack = new Stack();
 		LinkedList<String> linkedList = new LinkedList<>();
 

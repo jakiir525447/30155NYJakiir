@@ -1,20 +1,20 @@
-package math.problems;
+package math;
 
 public class MakePyramid {
     public static void main(String[] args) {
 
-        /*   Implement a large Pyramid of stars in the screen with java.
+        //   Implement a large Pyramid of stars in the screen with java.
+        //
+        //                    *
+        //                   * *
+        //                  * * *
+        //                 * * * *
+        //                * * * * *
+        //               * * * * * *
 
-                              *
-                             * *
-                            * * *
-                           * * * *
-                          * * * * *
-                         * * * * * *
-
-        */
+        //Start Here
         int n=10;
-        pyramid(n);
+        pyramid(10);
     }
     public static void pyramid(int n){
         int k = 2*n-2;
@@ -31,6 +31,3 @@ public class MakePyramid {
         }
     }
 }
-
-        }
-  }

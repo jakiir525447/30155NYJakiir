@@ -17,11 +17,11 @@ public class FindLowestDifference {
                 if (abs(a - b) < min_difference)
                     min_difference = abs(a - b);
 
-        System.out.println("Lowest Difference between the two array cells: " min_difference);
+        System.out.println("Lowest Difference between the two array cells:" + min_difference);
 
 
-
+}
 
     }
 
-}
+
